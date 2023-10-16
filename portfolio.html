@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </head>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+    $(function() {
+        $("#cvbody").load("CV.html");
+    });
+</script>
 
 <body class="container-fluid">
     <div class="body-top bg-dark">
@@ -22,13 +28,13 @@
               </button>
                     <div class="collapse navbar-collapse" id="navbarnav">
                         <div class="navbar-nav mr-auto">
-                            <a class="nav-link active" aria-current="page" href="#body-top"></a>
+                            <a class="nav-link active" aria-current="page" href="#body-top">home</a>
                             <a class="nav-link" href="#about">About</a>
                             <a class="nav-link" href="#skills">Skills</a>
                             <a class="nav-link" href="#projects">projects</a>
                             <a class="nav-link" href="#timeline">Timeline</a>
                             <a class="nav-link" href="#contact">Contact</a>
-                            <a class="nav-link" onclick="getResume()" id="resume" href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> resume</a>
+                            <a class="nav-link" id="resume" href="#cv"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> resume</a>
                         </div>
                     </div>
                 </div>
@@ -323,6 +329,14 @@
     <section id="timeline">
         <div class="mt-5">
             <h1 class="text-center">Timeline</h1>
+        </div>
+    </section>
+
+    <section id="cv">
+        <div class="mt-5">
+            <h1 class="text-center">Curriculum Vitae</h1>
+            <div id="cvbody"></div>
+
         </div>
     </section>
 
